@@ -18,7 +18,7 @@ function setup()
         {
             canW = displayWidth;
             canH = displayHeight;
-            createCanvas(canW,canH);
+            createCanvas(canW*3,canH*3);
         }
         else
         {
