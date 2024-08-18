@@ -4,6 +4,7 @@ var wall_up, wall_down;
 var points = 0;
 var time = 150;
 var points_image, points_sprite;
+var canW, canH;
 
 function preload()
 {
@@ -12,7 +13,17 @@ function preload()
 }
 function setup()
 {
-    createCanvas(500,500);
+    var isAndroid = /Android/;
+    if(isAndroid)
+        {
+            canW = displayWidth;
+            canH = displayHeight;
+            createCanvas(canW,canH);
+        }
+        else
+        {
+            createCanvas(500,500)
+        }
     fire_man = createSprite(150,400,25,25);
     fire_man.shapeColor = "orange";
     fenix_sprite = createSprite(46,46,46,46);
